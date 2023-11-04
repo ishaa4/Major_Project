@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Login from './Login';
+import {UserProfile} from './UserProfile';
 
 function App() {
+  const [userProfiles, setUserProfiles] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleLike = () => {
+    // Implement logic to handle liking a user and update userProfiles
+  };
+
+  const handleDislike = () => {
+    // Implement logic to handle disliking a user and update userProfiles
+  };
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+        <Route path="/" element={<Login/>} />
+        <Route
+          path="/user-profiles"
+          element={<UserProfile
+            user={userProfiles[currentIndex]}
+            onLike={handleLike}
+            onDislike={handleDislike}
+          />}
+        />
+      </Routes>
   );
 }
 
