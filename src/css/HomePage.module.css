@@ -1,0 +1,31 @@
+#profileContainer {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: #ededed;
+}
+
+.ProfileCard {
+    background-color: black;
+}
+
+.profileImage {
+    width: 60%;
+    height: 200px;
+}
+
+.genreContainer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.genre {
+    background-color: #01C75E;
+    color: black
+}
+
+.artistContainer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}

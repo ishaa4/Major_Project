@@ -12,17 +12,30 @@ body {
     padding: 20px;
   }
   
-  /* Login Page */
-  .login-container {
+
+/* Login Page */
+.login-container {
+    background-color: #1e1e1e; /* Dark background color */
+    color: white; /* Text color */
     text-align: center;
     padding: 100px;
   }
   
   .login-container h1 {
-    font-size: 2rem;
-    color: #1db954; /* Spotify green */
+    font-size: 3rem; /* Adjust the font size as needed */
+    margin: 0;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #1db954; 
+    font-weight: bold;
   }
   
+  .login-container {
+    text-align: center;
+    padding: 100px;
+  }
+  `````````````
   .login-container p {
     font-size: 1rem;
   }

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Login from './Login';
+import Login from './pages/Login';
 import {UserProfile} from './UserProfile';
+import { Callback } from './pages/Callback';
+import {HomePage} from './pages/HomePage';
 
 function App() {
   const [userProfiles, setUserProfiles] = useState([]);
@@ -19,6 +21,8 @@ function App() {
   return (
     <Routes>
         <Route path="/" element={<Login/>} />
+        <Route path="/callback" element={<Callback/>}/>
+        <Route path="/home" element={<HomePage/>}/>
         <Route
           path="/user-profiles"
           element={<UserProfile
